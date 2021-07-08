@@ -20,10 +20,10 @@
             "program": "lib/main.dart"
         },
         {
-            "name": "Flutter (scratch.dart)",
+            "name": "Flutter (main.dart)",
             "type": "dart",
             "request": "launch",
-            "program": "scratch.dart"
+            "program": "main.dart"
         }
     ]
 }
