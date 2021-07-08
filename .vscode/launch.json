@@ -1,29 +1,10 @@
 {
     "configurations": [
         {
-            "name": "Flutter",
-            "type": "dart",
-            "request": "launch",
-            "program": "lib/main.dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "Dart",
-            "type": "dart",
-            "request": "launch",
-            "program": "bin/main.dart"
-        },
-        {
-            "name": "Flutter",
+            "name": "Flutter (lib/main.dart)",
             "type": "dart",
             "request": "launch",
             "program": "lib/main.dart"
-        },
-        {
-            "name": "Flutter (main.dart)",
-            "type": "dart",
-            "request": "launch",
-            "program": "main.dart"
         }
     ]
 }
