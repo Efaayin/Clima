@@ -16,12 +16,24 @@ class _LoadingScreenState extends State<LoadingScreen> {
     location.getCurrentLocation();
   }
 
-  void getData() {
-    
+  Future getData() async {
+    Response response = await get(Uri.parse(
+        'https://jsonplaceholder.typicode.com/albums/1'));
+    print(response);
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('data'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: getData,
+          child: Text('Test'),
+        ),
+      ),
+    );
   }
 }
