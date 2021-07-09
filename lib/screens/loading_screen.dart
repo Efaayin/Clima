@@ -9,8 +9,7 @@ class LoadingScreen extends StatefulWidget {
 class _LoadingScreenState extends State<LoadingScreen> {
   void getLocation() async {
     Position position = await Geolocator.getCurrentPosition(
-      desiredAccuracy: LocationAccuracy.best,
-      forceAndroidLocationManager: true,
+      desiredAccuracy: LocationAccuracy.low,
     );
     print(position);
   }
@@ -18,20 +17,20 @@ class _LoadingScreenState extends State<LoadingScreen> {
   @override
   void initState() {
     super.initState();
-    // getLocation();
+    getLocation();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('data'),
+        title: Text('Data'),
       ),
       body: Center(
         child: ElevatedButton(
           onPressed: getLocation,
           child: Text(
-            'Get Weather',
+            'Get Location',
             style: TextStyle(color: Colors.white),
           ),
         ),
