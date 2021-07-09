@@ -1,6 +1,6 @@
 import 'package:clima/services/location.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+import 'package:http/http.dart';
 
 Location location = Location();
 
@@ -16,12 +16,6 @@ class _LoadingScreenState extends State<LoadingScreen> {
     location.getCurrentLocation();
   }
 
-  Future getData() async {
-    http.Response response = await http.get(Uri.parse(
-        'https://jsonplaceholder.typicode.com/albums/1'));
-    print(response);
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +24,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
       ),
       body: Center(
         child: ElevatedButton(
-          onPressed: getData,
+          onPressed: () {},
           child: Text('Test'),
         ),
       ),
