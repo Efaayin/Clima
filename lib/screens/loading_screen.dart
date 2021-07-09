@@ -1,6 +1,6 @@
 import 'package:clima/services/location.dart';
 import 'package:flutter/material.dart';
-// import 'package:geolocator/geolocator.dart';
+import 'package:http/http.dart';
 
 Location location = Location();
 
@@ -14,6 +14,10 @@ class _LoadingScreenState extends State<LoadingScreen> {
   void initState() {
     super.initState();
     location.getCurrentLocation();
+  }
+
+  void getData() {
+    
   }
 
   @override
