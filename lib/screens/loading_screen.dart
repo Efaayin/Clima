@@ -1,6 +1,6 @@
 import 'package:clima/services/location.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 
 Location location = Location();
 
@@ -17,7 +17,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   }
 
   Future getData() async {
-    Response response = await get(Uri.parse(
+    http.Response response = await http.get(Uri.parse(
         'https://jsonplaceholder.typicode.com/albums/1'));
     print(response);
   }
