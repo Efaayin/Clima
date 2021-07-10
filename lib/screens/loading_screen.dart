@@ -24,7 +24,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
       ),
       body: Center(
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: location.getCurrentLocation,
           child: Text('Test'),
         ),
       ),
