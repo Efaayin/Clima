@@ -16,6 +16,16 @@ class _LoadingScreenState extends State<LoadingScreen> {
     location.getCurrentLocation();
   }
 
+  Future<void> getData() async {
+    Response response = await get(Uri.parse('https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=137054c7985eadcbbfb130a6da542569'));
+
+    if (response.statusCode == 200) {
+      String data = response.body;
+    } else {
+      print(response.statusCode);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +34,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
       ),
       body: Center(
         child: ElevatedButton(
-          onPressed: location.getCurrentLocation,
+          onPressed: getData,
           child: Text('Test'),
         ),
       ),
