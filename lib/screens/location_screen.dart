@@ -11,7 +11,7 @@ class LocationScreen extends StatefulWidget {
 }
 
 class _LocationScreenState extends State<LocationScreen> {
-  var temperature;
+  late double temperature;
   var condition;
   var cityName;
 
@@ -26,8 +26,6 @@ class _LocationScreenState extends State<LocationScreen> {
     temperature = weatherData['main']['temp'];
     cityName = weatherData['name'];
     condition = weatherData['weather'][0]['id'];
-
-    print(temperature);
   }
 
   @override
@@ -74,7 +72,7 @@ class _LocationScreenState extends State<LocationScreen> {
                 child: Row(
                   children: <Widget>[
                     Text(
-                      '$temperature',
+                      '$temperature°',
                       style: kTempTextStyle,
                     ),
                     Text(
