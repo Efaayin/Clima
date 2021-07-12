@@ -11,7 +11,6 @@ class Location {
       );
       latitude = position.latitude;
       longitude = position.longitude;
-      print('Latitude: $latitude and Longitude: $longitude');
     } catch (e) {
       print(e);
     }
