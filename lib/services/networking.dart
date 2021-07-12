@@ -15,7 +15,7 @@ class NetworkHelper {
       var decodeddata = jsonDecode(data);
 
       return decodeddata;
-      } else {
+    } else {
       print(response.statusCode);
     }
   }
