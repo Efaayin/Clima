@@ -17,8 +17,3 @@ class Location {
     }
   }
 }
-
-
-// var temperature = decodeddata['main']['temp'];
-// var cityName = decodeddata['name'];
-// var condition = decodeddata['weather'][0]['id'];
