@@ -11,7 +11,6 @@ class LocationScreen extends StatefulWidget {
 }
 
 class _LocationScreenState extends State<LocationScreen> {
-
   var temperature;
   var condition;
   var cityName;
